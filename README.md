@@ -2,8 +2,9 @@
 
 A Waybar custom module to display VPN connection status.
 
-[!Image](docs/disconnect.png)
-[!Image](docs/connect.png)
+![Disconnected](docs/disconnect.png)
+
+![Connected](docs/connect.png)
 
 ## Features
 
