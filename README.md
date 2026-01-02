@@ -8,8 +8,8 @@ A Waybar custom module to display VPN connection status.
 
 ## Features
 
-- Displays VPN connection status with Nerd Font icons
-- Shows VPN name and IP in tooltip
+- Displays VPN connection status
+- Shows VPN name and IP
 - Click to disconnect VPN
 - Support for multiple VPN clients (IVPN, NordVPN)
 
@@ -39,8 +39,8 @@ Run without arguments it shows JSON output:
 ### Options
 - `--client`: VPN client (ivpn, nordvpn; default: ivpn)
 - `--action`: status or disconnect (default: status)
-- `--icon-connected`: Icon for connected state (default: )
-- `--icon-disconnected`: Icon for disconnected state (default: )
+- `--icon-connected`: Icon for connected state (default: )
+- `--icon-disconnected`: Icon for disconnected state (default: )
 - `--tooltip-format`: Tooltip format with {name} and {ip} placeholders (default: "Connected to {name} ({ip})")
 
 ## Waybar Configuration
@@ -60,5 +60,4 @@ Add to your `~/.config/waybar/config`:
 ## Requirements
 
 - VPN client CLI installed (e.g., `ivpn` for IVPN, `nordvpn` for NordVPN)
-- Waybar
 
