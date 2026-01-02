@@ -1,3 +1,4 @@
+// Package output
 package output
 
 import (
@@ -17,7 +18,7 @@ func (o WaybarOutput) Print() error {
 }
 
 func FormatTooltip(format, name, ip string) string {
-	tooltip := strings.Replace(format, "{name}", name, -1)
-	tooltip = strings.Replace(tooltip, "{ip}", ip, -1)
+	tooltip := strings.ReplaceAll(format, "{name}", name)
+	tooltip = strings.ReplaceAll(tooltip, "{ip}", ip)
 	return tooltip
 }

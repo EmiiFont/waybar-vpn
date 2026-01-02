@@ -1,25 +1,25 @@
 # Waybar VPN Module
 
-A Waybar custom module written in Go to display VPN connection status with disconnect on click functionality.
+A Waybar custom module to display VPN connection status.
 
 ## Features
 
 - Displays VPN connection status with Nerd Font icons
 - Shows VPN name and IP in tooltip
 - Click to disconnect VPN
-- Modular support for multiple VPN clients (IVPN, NordVPN)
+- Support for multiple VPN clients (IVPN, NordVPN)
 
 ## Installation
 
 1. Ensure Go is installed
 2. Clone or download this repository
 3. Build the binary: `go build -o waybar-vpn .`
-4. Place the binary in your PATH (e.g., `~/.local/bin/`)
+4. Place the binary in your PATH
 
 ## Usage
 
 ### Status Display
-Run without arguments to get JSON output for Waybar:
+Run without arguments it shows JSON output:
 
 ```bash
 ./waybar-vpn
@@ -48,10 +48,9 @@ Add to your `~/.config/waybar/config`:
     "exec": "waybar-vpn",
     "interval": 5,
     "return-type": "json",
-    "format": "{text}",
-    "tooltip-format": "{tooltip}",
+    "format": " {text}",
     "on-click": "waybar-vpn --action=disconnect"
-}
+  }
 ```
 
 ## Requirements

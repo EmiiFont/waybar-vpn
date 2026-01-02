@@ -34,7 +34,7 @@ func (d *IVPNDetector) IsConnected() (bool, error) {
 func (d *IVPNDetector) GetName() (string, error) {
 	output, err := d.runIVPNCmd("status")
 	if err != nil {
-		return "IVPN", nil // Fallback
+		return "IVPN", nil
 	}
 
 	lines := strings.SplitSeq(output, "\n")

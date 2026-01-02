@@ -26,7 +26,7 @@ func (d *NordVPNDetector) IsConnected() (bool, error) {
 func (d *NordVPNDetector) GetName() (string, error) {
 	output, err := d.runNordVPNCmd("status")
 	if err != nil {
-		return "NordVPN", nil // Fallback
+		return "NordVPN", nil
 	}
 
 	lines := strings.SplitSeq(output, "\n")
