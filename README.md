@@ -2,6 +2,9 @@
 
 A Waybar custom module to display VPN connection status.
 
+[!Image](docs/disconnect.png)
+[!Image](docs/connect.png)
+
 ## Features
 
 - Displays VPN connection status with Nerd Font icons
@@ -58,12 +61,3 @@ Add to your `~/.config/waybar/config`:
 - VPN client CLI installed (e.g., `ivpn` for IVPN, `nordvpn` for NordVPN)
 - Waybar
 
-## Development
-
-- Run tests: `go test ./...`
-- Lint: `go vet ./...`
-- Format: `go fmt ./...`
-
-## License
-
-MIT
