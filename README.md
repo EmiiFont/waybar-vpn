@@ -11,7 +11,7 @@ A Waybar custom module to display VPN connection status.
 - Displays VPN connection status
 - Shows VPN name and IP
 - Click to disconnect VPN
-- Support for multiple VPN clients (IVPN, NordVPN)
+- Support for multiple VPN clients (IVPN, NordVPN, GlobalProtect via `gpclient`)
 
 ## Installation
 
@@ -37,7 +37,7 @@ Run without arguments it shows JSON output:
 ```
 
 ### Options
-- `--client`: VPN client (ivpn, nordvpn; default: ivpn)
+- `--client`: VPN client (`ivpn`, `nordvpn`, `gpclient`; default: `ivpn`)
 - `--action`: status or disconnect (default: status)
 - `--icon-connected`: Icon for connected state (default: )
 - `--icon-disconnected`: Icon for disconnected state (default: )
@@ -49,7 +49,7 @@ Add to your `~/.config/waybar/config`:
 
 ```json
 "custom/vpn": {
-    "exec": "waybar-vpn",
+    "exec": "waybar-vpn --client=gpclient",
     "interval": 5,
     "return-type": "json",
     "format": " {text}",
@@ -59,5 +59,4 @@ Add to your `~/.config/waybar/config`:
 
 ## Requirements
 
-- VPN client CLI installed (e.g., `ivpn` for IVPN, `nordvpn` for NordVPN)
-
+- VPN client CLI installed (for example `ivpn`, `nordvpn`, or `gpclient`)

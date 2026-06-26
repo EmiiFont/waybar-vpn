@@ -3,7 +3,6 @@ package vpn
 import (
 	"fmt"
 	"net"
-	"os/exec"
 	"strings"
 )
 
@@ -66,13 +65,5 @@ func (d *NordVPNDetector) Disconnect() error {
 }
 
 func (d *NordVPNDetector) runNordVPNCmd(args ...string) (string, error) {
-	cmd := exec.Command("nordvpn", args...)
-	cmd.Env = append(cmd.Env, "PATH=/usr/local/bin:/usr/bin:/bin")
-
-	output, err := cmd.CombinedOutput()
-	if err != nil {
-		return "", fmt.Errorf("nordvpn command failed: %v, output: %s", err, string(output))
-	}
-
-	return string(output), nil
+	return runCommand("nordvpn", args...)
 }
